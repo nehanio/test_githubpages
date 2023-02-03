@@ -29,20 +29,23 @@ const config = {
 		  </li>`,
     links: [{ text: '', link: '' }],
     search: {
-      enabled: false,
-      indexName: '',
-      algoliaAppId: process.env.GATSBY_ALGOLIA_APP_ID,
-      algoliaSearchKey: process.env.GATSBY_ALGOLIA_SEARCH_KEY,
-      algoliaAdminKey: process.env.ALGOLIA_ADMIN_KEY,
+      enabled: true,
+      indexName: 'test',
+      algoliaAppId: 'YQW18VRQDB',
+      algoliaSearchKey: 'f3919a004351627d86ae286742d8dbae',
+      algoliaAdminKey: 'e1c4e1df68755cf2260af5a7292b3659',
     },
   },
   sidebar: {
     forcedNavOrder: [
-      '/introduction', // add trailing slash if enabled above
-      '/codeblock',
+      // '/introduction', // add trailing slash if enabled above
+      // '/codeblock',
+      '/概要',
     ],
     collapsedNav: [
-      '/codeblock', // add trailing slash if enabled above
+      // '/codeblock', // add trailing slash if enabled above
+      '/データ処理',
+      '//列操作',
     ],
     links: [{ text: 'Hasura', link: 'https://hasura.io' }],
     frontLine: false,
