@@ -1,6 +1,6 @@
 const config = {
   gatsby: {
-    pathPrefix: '/test_githubpages',
+    pathPrefix: '/',
     siteUrl: 'https://hasura.io',
     gaTrackingId: null,
     trailingSlash: false,
