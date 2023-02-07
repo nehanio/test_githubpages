@@ -1,15 +1,16 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import { StaticQuery, graphql } from 'gatsby';
-import GitHubButton from 'react-github-btn';
+// import GitHubButton from 'react-github-btn';
 import Link from './link';
 import Loadable from 'react-loadable';
-
+import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
+import LoginRoundedIcon from '@mui/icons-material/LoginRounded';
 import config from '../../config.js';
 import LoadingProvider from './mdxComponents/loading';
-import { DarkModeSwitch } from './DarkModeSwitch';
+// import { DarkModeSwitch } from './DarkModeSwitch';
 
-const help = require('./images/help.svg');
+const help = require('./images/iconAmazonAthena.svg');
 
 const isSearchEnabled = config.header.search && config.header.search.enabled ? true : false;
 
@@ -60,9 +61,7 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
         site {
           siteMetadata {
             headerTitle
-            githubUrl
             helpUrl
-            tweetText
             logo {
               link
               image
@@ -76,17 +75,17 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
       }
     `}
     render={(data) => {
-      const logoImg = require('./images/logo.svg');
+      const logoImg = require('./images/iconAmazonAthena.svg');
 
-      const twitter = require('./images/twitter.svg');
+      // const twitter = require('./images/twitter.svg');
 
-      const discordBrandsBlock = require('./images/discord-brands-block.svg');
+      // const discordBrandsBlock = require('./images/discord-brands-block.svg');
 
-      const twitterBrandsBlock = require('./images/twitter-brands-block.svg');
+      // const twitterBrandsBlock = require('./images/twitter-brands-block.svg');
 
       const {
         site: {
-          siteMetadata: { headerTitle, githubUrl, helpUrl, tweetText, logo, headerLinks },
+          siteMetadata: { headerTitle, helpUrl, logo, headerLinks },
         },
       } = data;
 
@@ -108,17 +107,18 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
                 dangerouslySetInnerHTML={{ __html: headerTitle }}
               />
             </div>
-            {config.header.social ? (
+            {/* {config.header.social ? (
               <ul
                 className="socialWrapper visibleMobileView"
                 dangerouslySetInnerHTML={{ __html: config.header.social }}
               ></ul>
-            ) : null}
+            ) : null} */}
             {isSearchEnabled ? (
               <div className={'searchWrapper hiddenMobile navBarUL'}>
                 <LoadableComponent collapse={true} indices={searchIndices} />
               </div>
             ) : null}
+            <li className="divider hiddenMobile"></li>
             <div id="navbar" className={'topnav'}>
               <div className={'visibleMobile'}>
                 <Sidebar location={location} />
@@ -140,15 +140,8 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
                     );
                   }
                 })}
-                {helpUrl !== '' ? (
-                  <li>
-                    <a href={helpUrl}>
-                      <img src={help} alt={'Help icon'} />
-                    </a>
-                  </li>
-                ) : null}
 
-                {tweetText !== '' ? (
+                {/* {tweetText !== '' ? (
                   <li>
                     <a
                       href={'https://twitter.com/intent/tweet?&text=' + tweetText}
@@ -169,8 +162,8 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
                       dangerouslySetInnerHTML={{ __html: config.header.social }}
                     ></ul>
                   </li>
-                ) : null}
-                {githubUrl !== '' ? (
+                ) : null} */}
+                {/* {githubUrl !== '' ? (
                   <li className={'githubBtn'}>
                     <GitHubButton
                       href={githubUrl}
@@ -186,7 +179,7 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
                     isDarkThemeActive={isDarkThemeActive}
                     toggleActiveTheme={toggleActiveTheme}
                   />
-                </li>
+                </li> */}
               </ul>
             </div>
           </nav>

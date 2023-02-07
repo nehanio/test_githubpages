@@ -6,6 +6,8 @@
   "version": "0.0.1",
   "dependencies": {
     "@babel/plugin-proposal-export-default-from": "^7.12.13",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.7",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.3.0",
     "@emotion/styled-base": "^11.0.0",

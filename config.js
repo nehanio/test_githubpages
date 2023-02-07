@@ -6,28 +6,34 @@ const config = {
     trailingSlash: false,
   },
   header: {
-    logo: 'https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/brand.svg',
-    logoLink: 'https://hasura.io/learn/',
+    logo: 'https://lh5.googleusercontent.com/A2_AQCs9Lza349YwqceCvEGXMxMfmdBEqS0JxCP-cCju4XgYOn3nldy-54FEMsxqze60mFo4ApnYjWR-z0y8pA=w16383',
+    // 'https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/brand.svg',
+    logoLink: 'https://moonfish.nehan.io/',
     title:
-      "<a href='https://hasura.io/learn/'><img class='img-responsive' src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/learn-logo.svg' alt='Learn logo' /></a>",
-    githubUrl: 'https://github.com/hasura/gatsby-gitbook-boilerplate',
-    helpUrl: '',
-    tweetText: '',
-    social: `<li>
-		    <a href="https://twitter.com/hasurahq" target="_blank" rel="noopener">
-		      <div class="twitterBtn">
-		        <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/twitter-brands-block.svg' alt={'Twitter'}/>
-		      </div>
-		    </a>
-		  </li>
-			<li>
-		    <a href="https://discordapp.com/invite/hasura" target="_blank" rel="noopener">
-		      <div class="discordBtn">
-		        <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/discord-brands-block.svg' alt={'Discord'}/>
-		      </div>
-		    </a>
-		  </li>`,
-    links: [{ text: '', link: '' }],
+      // "<a href='https://moonfish.nehan.io/'><img class='img-responsive' src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/learn-logo.svg' alt='Learn logo' /></a>",
+      '<a>nehanで始める快適な分析生活</a>',
+    // githubUrl: 'https://github.com/hasura/gatsby-gitbook-boilerplate',
+    helpUrl: 'https://moonfish.nehan.io/',
+    // tweetText: '',
+    // social: `<li>
+    //     <a href="https://twitter.com/hasurahq" target="_blank" rel="noopener">
+    //       <div class="twitterBtn">
+    //         <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/twitter-brands-block.svg' alt={'Twitter'}/>
+    //       </div>
+    //     </a>
+    //   </li>
+    // 	<li>
+    //     <a href="https://discordapp.com/invite/hasura" target="_blank" rel="noopener">
+    //       <div class="discordBtn">
+    //         <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/discord-brands-block.svg' alt={'Discord'}/>
+    //       </div>
+    //     </a>
+    //   </li>`,
+    links: [
+      { text: 'ログイン', link: 'https://sunfish.nehan.io/projects' },
+      { text: 'お問い合わせ', link: 'https://8rgf0bp8.paperform.co/' },
+      { text: 'リリースノート', link: 'https://moonfish.nehan.io/release_note' },
+    ],
     search: {
       enabled: true,
       indexName: 'test',
@@ -47,11 +53,11 @@ const config = {
       '/データ処理',
       '//列操作',
     ],
-    links: [{ text: 'Hasura', link: 'https://hasura.io' }],
+    links: [{ text: 'サービスページ', link: 'https://moonfish.nehan.io/' }],
     frontLine: false,
     ignoreIndex: true,
-    title:
-      "<a href='https://hasura.io/learn/'>graphql </a><div class='greenCircle'></div><a href='https://hasura.io/learn/graphql/react/introduction/'>react</a>",
+    title: '',
+    // "<a href='https://hasura.io/learn/'>graphql </a><div class='greenCircle'></div><a href='https://hasura.io/learn/graphql/react/introduction/'>react</a>",
   },
   siteMetadata: {
     title: 'Gatsby Gitbook Boilerplate | Hasura',
