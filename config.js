@@ -6,7 +6,8 @@ const config = {
     trailingSlash: false,
   },
   header: {
-    logo: 'https://lh5.googleusercontent.com/A2_AQCs9Lza349YwqceCvEGXMxMfmdBEqS0JxCP-cCju4XgYOn3nldy-54FEMsxqze60mFo4ApnYjWR-z0y8pA=w16383',
+    logo: '/nehan_logo_RGB_formanual.png',
+    // 'https://lh5.googleusercontent.com/A2_AQCs9Lza349YwqceCvEGXMxMfmdBEqS0JxCP-cCju4XgYOn3nldy-54FEMsxqze60mFo4ApnYjWR-z0y8pA=w16383',
     // 'https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/brand.svg',
     logoLink: 'https://moonfish.nehan.io/',
     title:
@@ -43,19 +44,11 @@ const config = {
     },
   },
   sidebar: {
-    forcedNavOrder: [
-      // '/introduction', // add trailing slash if enabled above
-      // '/codeblock',
-      '/概要',
-    ],
-    collapsedNav: [
-      // '/codeblock', // add trailing slash if enabled above
-      '/データ処理',
-      '//列操作',
-    ],
+    forcedNavOrder: [''],
+    // collapsedNav: [''],
     links: [{ text: 'サービスページ', link: 'https://moonfish.nehan.io/' }],
-    frontLine: false,
-    ignoreIndex: true,
+    frontLine: false, //ディレクトリ最小化on/off
+    ignoreIndex: false,
     title: '',
     // "<a href='https://hasura.io/learn/'>graphql </a><div class='greenCircle'></div><a href='https://hasura.io/learn/graphql/react/introduction/'>react</a>",
   },
