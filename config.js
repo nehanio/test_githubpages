@@ -44,7 +44,20 @@ const config = {
     },
   },
   sidebar: {
-    forcedNavOrder: [''],
+    forcedNavOrder: [
+      '/system',
+      '/support_contets',
+      '/data_import',
+      '/data_analytics',
+      '/data_export',
+      '/ml',
+      '/visualize',
+      '/dashboard',
+      '/schadule',
+      '/schedule_notification',
+      '/management_content',
+      '/other_function',
+    ],
     // collapsedNav: [''],
     links: [{ text: 'サービスページ', link: 'https://moonfish.nehan.io/' }],
     frontLine: false, //ディレクトリ最小化on/off
