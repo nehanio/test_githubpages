@@ -17,6 +17,15 @@ export default class MDXRuntimeTest extends Component {
     if (!data) {
       return this.props.children;
     }
+    if (Object.keys(data).length == 2) {
+      return (
+        <div>
+          <center>
+            <h1>Page Not Found</h1>
+          </center>
+        </div>
+      );
+    }
     const {
       allMdx,
       mdx,
