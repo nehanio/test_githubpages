@@ -5,7 +5,7 @@ const InternalSection = ({ children }) => {
   if (process.env.SHOW_INTERNAL) {
     return children;
   }
-  return "**hogehoge**";
+  return null;
 };
 
 export default InternalSection;
