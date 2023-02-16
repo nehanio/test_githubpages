@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 
 import CodeBlock from './codeBlock';
 import AnchorTag from './anchor';
+import InternalSection from "./internalSection";
 
 const StyledPre = styled('pre')`
   padding: 16px;
@@ -81,4 +82,5 @@ export default {
   // TODO add `ul`
   // TODO add `li`
   // TODO add `table`
+  InternalSection,
 };
