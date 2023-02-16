@@ -130,7 +130,6 @@ const Tree = ({ edges }) => {
     }
   });
   const [collapsed, setCollapsed] = useState(defaultCollapsed);
-  console.log(collapsed);
 
   const toggle = (url) => {
     setCollapsed({
