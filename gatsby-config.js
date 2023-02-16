@@ -1,6 +1,8 @@
 require("dotenv").config();
 const queries = require("./src/utils/algolia");
+
 const config = require("./config");
+
 const plugins = [
   {
     resolve: 'gatsby-plugin-env-variables', options: {
@@ -33,6 +35,11 @@ const plugins = [
           resolve: 'gatsby-remark-copy-linked-files'
         }
       ],
+      mdxOptions: {
+        remarkPlugins: [
+          require(`remark-gfm`),
+        ],
+      },
       extensions: [".mdx", ".md"]
     }
   },
@@ -48,6 +55,7 @@ const plugins = [
     },
   },
 ];
+
 // check and add algolia
 if (config.header.search && config.header.search.enabled && config.header.search.algoliaAppId && config.header.search.algoliaAdminKey) {
   plugins.push({

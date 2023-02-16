@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
-import { Layout, Link } from '$components';
 import NextPrevious from '../components/NextPrevious';
 import config from '../../config';
-import { Edit, StyledHeading, StyledMainWrapper } from '../components/styles/Docs';
+import { StyledHeading, StyledMainWrapper } from '../components/styles/Docs';
 
 const forcedNavOrder = config.sidebar.forcedNavOrder;
 
 export default class MDXRuntimeTest extends Component {
   render() {
-    const { data, children, ...rest } = this.props;
+    const { data, children } = this.props;
 
     if (!data) {
       return this.props.children;
@@ -28,9 +27,6 @@ export default class MDXRuntimeTest extends Component {
     const {
       allMdx,
       mdx,
-      site: {
-        siteMetadata: { docsLocation, title },
-      },
     } = data;
 
     // const githubIcon = require('../components/images/github.svg').default;
@@ -84,7 +80,7 @@ export default class MDXRuntimeTest extends Component {
     canonicalUrl = canonicalUrl + mdx.fields.slug;
 
     return (
-      <Layout {...rest}>
+      <>
         <Helmet>
           {metaTitle ? <title>{metaTitle}</title> : null}
           {metaTitle ? <meta name="title" content={metaTitle} /> : null}
@@ -113,7 +109,7 @@ export default class MDXRuntimeTest extends Component {
         <div className={'addPaddTopBottom'}>
           <NextPrevious mdx={mdx} nav={nav} />
         </div>
-      </Layout>
+      </>
     );
   }
 }
