@@ -4,10 +4,13 @@
     "plugin:import/errors",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
-    "prettier",
-    "prettier/react"
+    "prettier"
   ],
-  "plugins": ["react", "import", "jsx-a11y"],
+  "plugins": [
+    "react",
+    "import",
+    "jsx-a11y"
+  ],
   "settings": {
     "react": {
       "version": "detect"
@@ -16,25 +19,58 @@
   "rules": {
     "react/prop-types": 0,
     "react/react-in-jsx-scope": "off",
-    "lines-between-class-members": ["error", "always"],
+    "lines-between-class-members": [
+      "error",
+      "always"
+    ],
     "padding-line-between-statements": [
       "error",
-      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
       {
         "blankLine": "always",
-        "prev": ["const", "let", "var"],
-        "next": ["const", "let", "var"]
+        "prev": [
+          "const",
+          "let",
+          "var"
+        ],
+        "next": "*"
       },
-      { "blankLine": "always", "prev": "directive", "next": "*" },
-      { "blankLine": "any", "prev": "directive", "next": "directive" }
+      {
+        "blankLine": "always",
+        "prev": [
+          "const",
+          "let",
+          "var"
+        ],
+        "next": [
+          "const",
+          "let",
+          "var"
+        ]
+      },
+      {
+        "blankLine": "always",
+        "prev": "directive",
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": "directive",
+        "next": "directive"
+      }
     ]
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 10,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
+    },
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": [
+        "@babel/preset-react"
+      ]
     }
   },
   "env": {
