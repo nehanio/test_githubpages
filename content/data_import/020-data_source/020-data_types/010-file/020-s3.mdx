@@ -1,0 +1,125 @@
+---
+title: 'Amazon S3のデータソースを作成する'
+---
+
+# 概要
+
+Amazon S3 PC 上の csv ファイルなどを、データソースとして登録できます。
+
+---
+
+# 必要な情報
+
+## 接続情報（必須）
+
+nehan 内に接続情報を作成し、指定してください。
+
+## バケット名（必須）
+
+S3 のバケット名を入力してください。
+例えば S3 上のデータ`S3://nehan-analyze-data/youtube/videos_2020-08-01.csv`を対象にする場合、`nehan-analyze-data`がバケット名に該当します。
+
+## ファイルキー（必須）
+
+ファイルキーは、バケット名以降の情報を必要とします。
+
+### 1 ファイルを指定する場合
+
+`S3://nehan-analyze-data/youtube/videos_2020-08-01.csv`を対象にする場合、`youtube/videos_2020-08-01.csv`がファイルキーに該当します。
+
+### 複数ファイルを一括で指定する場合
+
+ファイルキーの指定によっては、前方が一致するファイルを一括で取得し、データソース化できます。  
+例えば、ファイルキーに`youtube/videos_2020-08`を指定すれば、下記のような先頭一致するファイルすべてを取得し、縦結合してデータソース化します。
+
+```
+youtube/videos_2020-08-01.csv
+youtube/videos_2020-08-02.csv
+youtube/videos_2020-08-03.csv
+....
+
+```
+
+## サフィックス（任意）
+
+サフィックスを指定することで、後方一致するファイルを取得対象にできます。  
+例えば、サフィックスに`.csv`を入力すれば、ファイルキーに前方一致した.csv ファイルのみを読み込み対象にできます。  
+意図しない拡張子のファイルが読み込み対象になり、エラーになることを防げます。
+
+---
+
+# 作成手順
+
+---
+
+# 実行コマンド
+
+[ファイルアップロードと同様](/data_import/020-data_source/020-data_types/010-file_upload)
+
+---
+
+# 対応ファイルタイプ
+
+[ファイルアップロードと同様](/data_import/020-data_source/020-data_types/010-file_upload)
+
+---
+
+# 読み込みオプション
+
+[ファイルアップロードと同様](/data_import/020-data_source/020-data_types/010-file_upload)
+
+---
+
+# データ調整オプション
+
+[ファイルアップロードと同様](/data_import/020-data_source/020-data_types/010-file_upload)
+
+---
+
+# データソースの列名変更
+
+[ファイルアップロードと同様](/data_import/020-data_source/020-data_types/010-file_upload)
+
+---
+
+# データソースの列型変更
+
+[ファイルアップロードと同様](/data_import/020-data_source/020-data_types/010-file_upload)
+
+---
+
+# データプレビュー
+
+[ファイルアップロードと同様](/data_import/020-data_source/020-data_types/010-file_upload)
+
+---
+
+# データサマリ
+
+[ファイルアップロードと同様](/data_import/020-data_source/020-data_types/010-file_upload)
+
+---
+
+# データソース更新
+
+## データソースページから手動更新する
+
+## 分析プロジェクトから手動更新する
+
+## スケジューリング機能で自動更新する
+
+---
+
+# 詳細
+
+[ファイルアップロードと同様](/data_import/020-data_source/020-data_types/010-file_upload)
+
+---
+
+# 詳細（複数ファイルアップロード）
+
+[ファイルアップロードと同様](/data_import/020-data_source/020-data_types/010-file_upload)
+
+```
+
+```
