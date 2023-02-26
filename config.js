@@ -56,6 +56,7 @@ const config = {
       '/schadule',
       '/schedule_notification',
       '/management_content',
+      '/against_blackbox',
       '/other_function',
     ],
     // collapsedNav: [''],
