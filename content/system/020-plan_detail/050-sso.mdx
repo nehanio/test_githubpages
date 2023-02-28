@@ -4,14 +4,14 @@ title: 'シングルサインオンを利用する'
 
 # 概要
 
-ユーザーが nehan にログインする際、御社が採用している認証サービスを用いてログインできます。  
+ユーザーが nehan にログインする際、御社内で利用している認証サービスを用いてログインできます。  
 この機能は有償にてご提供可能です。
 
 ---
 
 # 詳細
 
-## 提供実績
+## 提供実績があるもの
 
 - [HENNGE ONE](https://teachme.jp/35563/manuals/10005198/)
 - OneLogin
@@ -19,14 +19,16 @@ title: 'シングルサインオンを利用する'
 
 ## 連携準備
 
-本機能ご提供に際して、nehan にご連絡いただく内容は下記のとおりです。
+### 御社側でご用意いただくもの
 
 - ID プロバイダのエンティティ ID
 - SAML SSO の URL
 - 証明書(—–BEGIN CERTIFICATE—– で開始し、—–END CERTIFICATE—–で終了するもの)
 
-また、下記の情報を御社側のサービスプロバイダに登録頂く必要があります。
+### nehan 側からご提供し、設定いただくもの
 
-- ACS URL: https://nehan-51472.firebaseapp.com/__/auth/handler
-- エンティティ ID: nehan
-- NameID: Email アドレス
+| 設定項目        | 値                                                  |
+| --------------- | --------------------------------------------------- |
+| ACS URL         | https://nehan-51472.firebaseapp.com/__/auth/handler |
+| エンティティ ID | nehan                                               |
+| NameID          | Email アドレス                                      |
