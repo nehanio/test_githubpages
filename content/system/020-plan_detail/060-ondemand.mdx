@@ -6,7 +6,7 @@ title: 'nehan on 御社AWSを知る'
 
 分析ツール nehan は通常、株式会社 nehan 社が契約する AWS 環境上でご提供しています。  
 が、セキュリティ面などをカスタマイズしたい場合などの希望に応じて、御社の AWS 上に nehan をインストールする形での提供を可能にしています。  
-このオプションが適用された nehan 環境と、通常環境の違いについて紹介します。
+このオプションが適用された nehan 環境の特徴について紹介します。
 
 ---
 
@@ -24,3 +24,41 @@ nehan のアクセス URL は`https://sunfish.nehan.io/`が標準ですがこの
 
 御社 AWS 上の設定によっては、特定のネットワーク環境でないと nehan にアクセスできない可能性があります。  
 御社内でご確認いただければと思います。
+
+## アップデートなどの運用
+
+サービス運用における全作業（アップデート、トラブルシューティングなど）は nehan 社が担当し、御社側で作業いただく必要は一切ありません。
+
+---
+
+# 構築時の手順
+
+## 概要
+
+構築作業は弊社側で行います。  
+作業を行うにあたり、御社 AWS 環境へのアクセスが必要であり、そのための権限調整をお願いします。
+
+## 付与いただく権限
+
+- 下記サービスでの構築権限及び、VPC、サブネットの構築権限
+- IAM の作成閲覧権限
+
+## 利用サービス
+
+- EC2
+- S3
+- RDS Aurora MySQL
+- ElastiCache Redis
+- ECR
+- ECS
+- Glue Data Catalog
+- CloudWatch
+- CloudWatch Logs
+- Elastic Load Balancing
+- Amazon Route 53
+- AWS Certificate Manager
+
+Hyper nehan 利用時には下記も追加
+
+- Amazon EC2 Auto Scaling
+- AWS Lambda
