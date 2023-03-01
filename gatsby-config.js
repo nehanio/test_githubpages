@@ -22,14 +22,14 @@ const plugins = [
     },
   },
   {
-    resolve: 'gatsby-transformer-remark',
+    resolve: 'gatsby-plugin-mdx',
     options: {
-      plugins: [
+      gatsbyRemarkPlugins: [
         {
           resolve: `gatsby-remark-mermaid`,
           options: {
             launchOptions: {
-              executablePath: 'path/to/chrome/executable',
+              executablePath: '/usr/bin/google-chrome',
             },
             svgo: {
               plugins: [{ name: 'removeTitle', active: false }],
@@ -40,13 +40,6 @@ const plugins = [
             },
           },
         },
-      ],
-    },
-  },
-  {
-    resolve: 'gatsby-plugin-mdx',
-    options: {
-      gatsbyRemarkPlugins: [
         {
           resolve: 'gatsby-remark-images',
           options: {
